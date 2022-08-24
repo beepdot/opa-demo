@@ -191,7 +191,7 @@ curl localhost:8181/v1/data/rbac/allowed -d '{"input": {"token": "eyJhbGciOiJIUz
 ```
 # stop the opa server and rerun with a different policy file
 # on one terminal run opa in server mode and pass the rego file as data
-opa run -s check_for_user_roles_with_api_path.rego
+opa run -s check_for_user_roles_with_api.rego
 
 # open another terminal invoke the opa endpoint using curl
 curl localhost:8181/v1/data/rbacapi/allowed -d '{"input": {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjYxMzI2MjY4LCJleHAiOjE3ODc1MzY5MDksInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdfQ.W7cKk2njoWdgVc0OKHwXmi2zn0pSBNqnDxB4xIXFSK4"}}'
